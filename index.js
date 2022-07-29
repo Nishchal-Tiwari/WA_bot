@@ -18,7 +18,12 @@ mongoose.connect('mongodb+srv://messenger:Project%40123@cluster0.10fn5ry.mongodb
     const client = new Client({
         authStrategy: new RemoteAuth({
             store: store,
-            backupSyncIntervalMs: 300000
+            backupSyncIntervalMs: 300000,
+            puppeteer: {
+                args: [
+                    '--no-sandbox',
+                ],
+            },
         })
     });
     client.on('remote_session_saved', () => {
