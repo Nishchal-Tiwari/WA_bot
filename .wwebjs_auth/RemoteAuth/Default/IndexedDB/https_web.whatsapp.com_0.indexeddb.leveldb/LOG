@@ -1,10 +1,10 @@
-2022/07/29-20:50:45.165 bc0 Reusing MANIFEST N:\web\WA_BOT\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/07/29-20:50:45.173 bc0 Recovering log #4
-2022/07/29-20:50:45.557 bc0 Reusing old log N:\web\WA_BOT\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000004.log 
-2022/07/29-20:50:57.582 3978 Level-0 table #8: started
-2022/07/29-20:50:57.621 3978 Level-0 table #8: 1103298 bytes OK
-2022/07/29-20:50:57.624 3978 Delete type=0 #4
-2022/07/29-20:50:57.972 5ed0 Compacting 1@1 + 1@2 files
-2022/07/29-20:50:58.127 5ed0 Generated table #9@1: 21270 keys, 1189594 bytes
-2022/07/29-20:50:58.127 5ed0 Compacted 1@1 + 1@2 files => 1189594 bytes
-2022/07/29-20:50:58.128 5ed0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/07/29-22:27:25.935 108 Reusing MANIFEST N:\web\WA_BOT\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/07/29-22:27:25.938 108 Recovering log #4
+2022/07/29-22:27:26.099 108 Reusing old log N:\web\WA_BOT\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000004.log 
+2022/07/29-22:27:36.958 1ec0 Level-0 table #8: started
+2022/07/29-22:27:36.985 1ec0 Level-0 table #8: 1099952 bytes OK
+2022/07/29-22:27:36.986 1ec0 Delete type=0 #4
+2022/07/29-22:27:37.618 1ca8 Compacting 1@1 + 1@2 files
+2022/07/29-22:27:37.678 1ca8 Generated table #9@1: 21437 keys, 1192887 bytes
+2022/07/29-22:27:37.678 1ca8 Compacted 1@1 + 1@2 files => 1192887 bytes
+2022/07/29-22:27:37.679 1ca8 compacted to: files[ 0 0 1 0 0 0 0 ]
