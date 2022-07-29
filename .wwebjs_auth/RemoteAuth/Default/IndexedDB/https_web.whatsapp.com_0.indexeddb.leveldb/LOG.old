@@ -1,0 +1,5 @@
+2022/07/29-20:38:14.110 b48 Creating DB N:\web\sfd\test\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2022/07/29-20:38:14.122 b48 Reusing MANIFEST N:\web\sfd\test\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/07/29-20:38:34.413 6268 Level-0 table #5: started
+2022/07/29-20:38:34.462 6268 Level-0 table #5: 1108557 bytes OK
+2022/07/29-20:38:34.465 6268 Delete type=0 #3
