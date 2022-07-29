@@ -7,7 +7,7 @@ const pyq_schema = require('./pyq_schema')
 const fs = require('fs')
 var urlToImage = require('url-to-image');
 const https = require("https");
-const { reduceRight } = require('./Mdata');
+
 
 
 function getImage(r, from) {
