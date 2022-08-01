@@ -142,6 +142,11 @@ module.exports = [{
         "mname": "RITESH KUMARI",
         "sec": "D",
         "fname_hindi": "प्रेम कुमार",
+
+
+
+
+
         "mname_hindi": "रितेश कुमारी",
         "uid": 832729213707,
         "S.No": 54,
@@ -9745,7 +9750,9 @@ module.exports = [{
         "sec": "F",
         "fname_hindi": "हरीश कुमार",
         "mname_hindi": "सुधा देवी",
-        "uid": 729299074773
+        "univ_rollno": 201500699,
+        "uid": 729299074773,
+        "cpi": 6.55
     },
     {
         "GLA University, Mathura": 654,

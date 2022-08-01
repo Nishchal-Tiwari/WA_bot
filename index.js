@@ -5,13 +5,10 @@ const data = require('./Mdata')
 const pyq_schema = require('./pyq_schema')
 const { MongoStore } = require('wwebjs-mongo');
 const mongoose = require('mongoose');
-
+const fetch = require('node-fetch')
 const fs = require('fs')
 
 const https = require("https");
-
-
-
 
 mongoose.connect('mongodb+srv://messenger:Project%40123@cluster0.10fn5ry.mongodb.net/?retryWrites=true&w=majority').then(() => {
     const store = new MongoStore({ mongoose: mongoose });
@@ -19,7 +16,6 @@ mongoose.connect('mongodb+srv://messenger:Project%40123@cluster0.10fn5ry.mongodb
         authStrategy: new RemoteAuth({
             store: store,
             backupSyncIntervalMs: 300000,
-
         }),
         puppeteer: {
             args: [
@@ -32,39 +28,40 @@ mongoose.connect('mongodb+srv://messenger:Project%40123@cluster0.10fn5ry.mongodb
     })
 
 
-    function getImage(r, from) {
-        const file = fs.createWriteStream("img.jpg");
-        https.get("https://glauniversity.in:8103/" + r + ".jpg", response => {
-            var stream = response.pipe(file);
+    async function getImage(r, from) {
+        const x = await fetch('https://glauniversity.in:8103/' + r + '.jpg');
+        p = await x.arrayBuffer()
+        p = Buffer.from(p);
 
-            stream.on("finish", function() {
+        var stream = fs.createWriteStream('img.jpg').write(p,
+
+            () => {
                 console.log("done")
                 const media = MessageMedia.fromFilePath('img.jpg');
                 console.log(media.filename)
                 client.sendMessage(from, media);
-            });
+
+            })
 
 
 
-        })
     }
 
-    function getImage_caption(from, captionr, r) {
-        const file = fs.createWriteStream("img.jpg");
 
-        https.get("https://glauniversity.in:8103/" + r + ".jpg", response => {
-            var stream = response.pipe(file);
+    async function getImage_caption(from, captionr, r) {
+        const x = await fetch('https://glauniversity.in:8103/' + r + '.jpg');
+        p = await x.arrayBuffer()
+        p = Buffer.from(p);
 
-            stream.on("finish", function() {
+        var stream = fs.createWriteStream('img.jpg').write(p,
+
+            () => {
                 console.log("done")
                 const media = MessageMedia.fromFilePath('img.jpg');
                 console.log(media.filename)
                 client.sendMessage(from, media, { caption: captionr });
-            });
 
-
-
-        })
+            })
     }
 
 
@@ -99,14 +96,15 @@ mongoose.connect('mongodb+srv://messenger:Project%40123@cluster0.10fn5ry.mongodb
                 msg.reply("ROLLNO. DOES NOT EXIST!!!")
             } else {
                 const str = "*😈    🆈🅾🆄🆁🆂 🆃🆁🆄🅻🆈    😈* \n\n\n" +
-                    "⭕ 𝐑𝐎𝐋𝐋 𝐍𝐎 :" + x.univ_rollno + "\n" +
+                    "⭕ University 𝐍𝐎 :" + x.univ_rollno + "\n" +
                     "👨‍💻 𝐒𝐭𝐮𝐝𝐞𝐧𝐭 𝐍𝐚𝐦𝐞 :" + x.sname + "\n" +
+                    "⭐ 𝐒𝐞𝐜𝐭𝐢𝐨𝐧 :" + x.sec + "\n" +
                     "☢  🅲🅿🅸 :" + x.cpi + "\n" +
                     "👨 𝐅𝐚𝐭𝐡𝐞𝐫 𝐍𝐚𝐦𝐞 :" + x.fname + " / " + x.fname_hindi + "\n" +
                     "👩 𝐌𝐨𝐭𝐡𝐞𝐫 𝐍𝐚𝐦𝐞 " + x.mname + " / " + x.mname_hindi;
 
 
-                getImage_caption(msg.from, str, x.univ_rollno)
+                await getImage_caption(msg.from, str, x.univ_rollno)
 
             }
         } else if (msg.body.search("photo ") >= 0) {
@@ -116,7 +114,30 @@ mongoose.connect('mongodb+srv://messenger:Project%40123@cluster0.10fn5ry.mongodb
             r = parseInt(r);
 
 
-            getImage(r, msg.from)
+            await getImage(r, msg.from)
+
+
+
+
+
+
+        } else if (msg.body.search("sname ") >= 0) {
+            var r = msg.body;
+
+            r = r.replace('sname', "");
+            r = r.trim();
+
+
+            console.log(r);
+            const x = data.filter((d) => {
+                return d.sname.toLowerCase().search(r.toLowerCase()) >= 0;
+            })
+
+            var str = "*😈    🆈🅾🆄🆁🆂 🆃🆁🆄🅻🆈    😈* \n\n\n";
+            x.map(d => {
+                str = str + "\n😎  " + d.sname + " -> " + d.univ_rollno;
+            })
+            client.sendMessage(msg.from, str)
 
 
 

@@ -1,5 +1,25 @@
-2022/07/29-20:38:14.110 b48 Creating DB N:\web\sfd\test\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
-2022/07/29-20:38:14.122 b48 Reusing MANIFEST N:\web\sfd\test\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/07/29-20:38:34.413 6268 Level-0 table #5: started
-2022/07/29-20:38:34.462 6268 Level-0 table #5: 1108557 bytes OK
-2022/07/29-20:38:34.465 6268 Delete type=0 #3
+2022/08/01-08:52:24.278 36 Reusing MANIFEST /app/.wwebjs_auth/RemoteAuth/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/08/01-08:52:24.278 36 Recovering log #32
+2022/08/01-08:52:24.295 36 Reusing old log /app/.wwebjs_auth/RemoteAuth/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000032.log 
+2022/08/01-08:52:47.113 2d Level-0 table #38: started
+2022/08/01-08:52:47.142 2d Level-0 table #38: 1225972 bytes OK
+2022/08/01-08:52:47.145 2d Delete type=0 #32
+2022/08/01-08:52:48.658 2d Compacting 1@1 + 2@2 files
+2022/08/01-08:52:48.722 2d Generated table #39@1: 45401 keys, 2256554 bytes
+2022/08/01-08:52:48.737 2d Generated table #40@1: 12138 keys, 657433 bytes
+2022/08/01-08:52:48.737 2d Compacted 1@1 + 2@2 files => 2913987 bytes
+2022/08/01-08:52:48.738 2d compacted to: files[ 0 0 2 0 0 0 0 ]
+2022/08/01-08:52:48.739 2d Delete type=2 #34
+2022/08/01-08:52:48.739 2d Delete type=2 #38
+2022/08/01-08:52:48.739 2d Delete type=2 #35
+2022/08/01-12:10:56.351 7a Level-0 table #42: started
+2022/08/01-12:10:56.742 7a Level-0 table #42: 1210777 bytes OK
+2022/08/01-12:10:56.744 7a Delete type=0 #37
+2022/08/01-12:14:16.697 65 Compacting 1@1 + 2@2 files
+2022/08/01-12:14:16.767 65 Generated table #43@1: 48351 keys, 2261745 bytes
+2022/08/01-12:14:16.785 65 Generated table #44@1: 12707 keys, 844958 bytes
+2022/08/01-12:14:16.785 65 Compacted 1@1 + 2@2 files => 3106703 bytes
+2022/08/01-12:14:16.786 65 compacted to: files[ 0 0 2 0 0 0 0 ]
+2022/08/01-12:14:16.786 65 Delete type=2 #40
+2022/08/01-12:14:16.786 65 Delete type=2 #39
+2022/08/01-12:14:16.786 65 Delete type=2 #42

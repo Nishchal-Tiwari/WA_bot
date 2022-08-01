@@ -1,2 +1,6 @@
-2022/07/29-20:38:11.788 7c8 Creating DB N:\web\sfd\test\.wwebjs_auth\RemoteAuth\Default\Local Storage\leveldb since it was missing.
-2022/07/29-20:38:11.795 7c8 Reusing MANIFEST N:\web\sfd\test\.wwebjs_auth\RemoteAuth\Default\Local Storage\leveldb/MANIFEST-000001
+2022/08/01-08:52:23.652 2e Reusing MANIFEST /app/.wwebjs_auth/RemoteAuth/Default/Local Storage/leveldb/MANIFEST-000001
+2022/08/01-08:52:23.652 2e Recovering log #15
+2022/08/01-08:52:23.653 2e Reusing old log /app/.wwebjs_auth/RemoteAuth/Default/Local Storage/leveldb/000015.log 
+2022/08/01-09:23:23.857 7a Level-0 table #20: started
+2022/08/01-09:23:23.860 7a Level-0 table #20: 9082 bytes OK
+2022/08/01-09:23:23.861 7a Delete type=0 #15
